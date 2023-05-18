@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --firt-Color: #2b3a55;
+  --second-Color: #ce7777;
+  --third-Color: #e8c4c4;
+  --fourth-Color: #f2e5e5;
+  --bg-white: white;
+  --width-container: 80%;
+}
+main {
+  width: 100%;
+}

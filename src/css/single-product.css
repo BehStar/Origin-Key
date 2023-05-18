@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --first-Color: #2b3a55;
+  --second-Color: #ce7777;
+  --third-Color: #e8c4c4;
+  --fourth-Color: #f2e5e5;
+  --bg-white: white;
+  --width-container: 90%;
+}
+.single-page {
+  width: 100%;
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--fourth-Color);
+  color: var(--first-Color);
+  direction: rtl;
+}
+
+.container-single-page {
+  width: var(--width-container);
+  position: absolute;
+  left: 50%;
+  margin: 10px 0;
+  margin-left: calc((calc(var(--width-container) / 2)) * -1);
+  padding-bottom: 10px;
+}
+.container-single-page .box-single-product {
+  width: 100%;
+  background-color: var(--bg-white);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.title-single {
+  width: 100%;
+  height: 50px;
+}
+.title-single h2 {
+  padding-right: 10px;
+}
+.box-product {
+  width: 100%;
+  display: flex;
+}
+.left-single {
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-single img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+.right-single {
+  width: 70%;
+  height: 100%;
+  direction: rtl;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 10px;
+  padding-top: 10px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.right-single .price-single {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+.right-single .price-single .old-price,
+.right-single .price-single .new-price {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.right-single .price-single .old-price .price,
+.right-single .price-single .new-price .price {
+  width: 66.66%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.right-single .price-single .old-price .tooman,
+.right-single .price-single .new-price .tooman {
+  width: 33.33%;
+  height: 100%;
+  font-size: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-single .price-single .old-price .tooman {
+  color: var(--second-Color);
+}
+.right-single .price-single .old-price .price {
+  color: var(--second-Color);
+  text-decoration: line-through;
+  font-size: 1.2em;
+}
+.right-single .price-single .new-price .price {
+  color: var(--first-Color);
+  font-size: 1.4em;
+}
+/* ----------- */
+.right-single .first-explain-single,
+.right-single .second-explain-single,
+.right-single .third-explain-single {
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+}
+.right-single .first-explain-single p,
+.right-single .second-explain-single p,
+.right-single .third-explain-single p {
+  width: 100%;
+  height: 100%;
+  font-size: 0.9em;
+}
+.right-single .row-btns {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.right-single .btn-group-nums {
+  width: 30%;
+  height: 100%;
+  background-color: var(--fourth-Color);
+  color: var(--first-Color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+.right-single .btn-group-nums .btn-nums {
+  width: 30%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--first-Color);
+  color: var(--fourth-Color);
+  font-size: 1em;
+  transition: 0.3s;
+  border: 1px solid var(--fourth-Color);
+  border-radius: 8px;
+}
+.right-single .btn-group-nums .btn-nums:hover {
+  font-size: 1.2em;
+}
+.right-single .add-to-card {
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: var(--first-Color);
+  color: var(--fourth-Color);
+  font-size: 0.8em;
+  transition: 0.3s;
+  border-radius: 8px;
+  margin-top: 5px;
+  /* margin: 20px 0; */
+}
+.right-single .add-to-card:hover {
+  font-size: 0.85em;
+}
+@media (max-width: 767px) {
+  .box-product {
+    width: 100%;
+    height: 700px;
+    flex-direction: column-reverse;
+  }
+  .left-single {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  .right-single {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 250px;
+  }
+  .right-single .price-single .old-price,
+  .right-single .price-single .new-price {
+    width: 50%;
+  }
+  .right-single .price-single .new-price .price {
+    font-size: 1.2em;
+  }
+  .right-single .price-single .old-price .tooman,
+  .right-single .price-single .new-price .tooman {
+    justify-content: start;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .right-single .price-single .old-price,
+  .right-single .price-single .new-price {
+    width: 30%;
+  }
+}

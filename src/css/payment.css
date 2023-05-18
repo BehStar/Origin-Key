@@ -1,0 +1,243 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --first-Color: #2b3a55;
+  --second-Color: #ce7777;
+  --third-Color: #e8c4c4;
+  --fourth-Color: #f2e5e5;
+  --fifth-color: #2b3a5555;
+  --bg-white: white;
+  --width-container: 90%;
+}
+body {
+  background-color: var(--fourth-Color);
+}
+.payment-page {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--fourth-Color);
+  color: var(--first-Color);
+  position: relative;
+  top: 100px;
+  background-color: red;
+}
+.container-payment-page {
+  width: var(--width-container);
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  left: 50%;
+  margin-left: calc((calc(var(--width-container) / 2)) * -1);
+  direction: rtl;
+}
+
+/* PAYMENT EXPLAIN------------------------------------------------------------- */
+.payment-explain {
+  width: 100%;
+  background-color: var(--bg-white);
+  margin-top: 10px;
+  border-radius: 8px;
+  padding-right: 10px;
+}
+.payment-explain h2 {
+  color: var(--second-Color);
+  padding: 10px 0;
+}
+/* PAYMENT------------------------------------------------------- */
+.payment {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.payment-right {
+  width: 49.5%;
+  margin: 8px 0;
+}
+.payment-left {
+  width: 49.5%;
+  margin: 8px 0;
+}
+.payment-ir {
+  width: 100%;
+  border: 1px solid var(--fourth-Color);
+  border-radius: 8px;
+  background-color: var(--bg-white);
+}
+.payment-title {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  /* background-color: red; */
+}
+
+.payment-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.payment-list li {
+  width: 100%;
+  height: 40px;
+  background-color: var(--first-Color);
+  color: var(--fourth-Color);
+  border-bottom: 1px solid var(--bg-white);
+  display: flex;
+  align-items: center;
+}
+.payment-list li div:first-child {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+.payment-list li div:last-child {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+.payment-list li:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+/* PAYMENT CRYPTO---------------------------------------- */
+.payment-crypto {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+}
+.payment-crypto .payment-list li {
+  width: 100%;
+  height: 80px;
+}
+.payment-crypto .payment-list li .name-crypto {
+  width: 10%;
+  height: 100%;
+}
+.payment-crypto .payment-list li .qr-code {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment-crypto .payment-list li .qr-code img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  cursor: pointer;
+}
+.payment-crypto .payment-list li .address-wallet {
+  width: 70%;
+  height: 100%;
+  direction: ltr;
+}
+.left-address-wallet {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-address-wallet i {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.right-address-wallet {
+  width: 80%;
+  height: 100%;
+  color: var(--fourth-Color);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.copied {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  background-color: var(--first-Color);
+  border-radius: 8px;
+}
+/*MODAL PAGE QR_CODE =================================================== */
+.modal-page-qr {
+  /* width: 100vw;
+  height: 100vh; */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.modal-page-qr .box-img-in-modal {
+  width: 50%;
+  height: 50% !important;
+}
+.modal-page-qr .box-img-in-modal img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+.modal-page-qr .box-img-in-modal .close {
+  width: 10%;
+  height: 10%;
+  font-size: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  color: var(--fourth-Color);
+  transition: 0.3s;
+}
+.modal-page-qr .box-img-in-modal .close:hover {
+  font-size: 2.5rem;
+  color: var(--second-Color);
+}
+/* --------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .payment-right {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  .payment-left {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .address-wallet .left-address-wallet,
+  .address-wallet .right-address-wallet {
+    font-size: 0.85rem;
+  }
+}

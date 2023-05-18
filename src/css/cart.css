@@ -1,0 +1,114 @@
+:root {
+  --first-Color: #2b3a55;
+  --second-Color: #ce7777;
+  --third-Color: #e8c4c4;
+  --fourth-Color: #f2e5e5;
+  --bg-white: white;
+  --width-container: 90%;
+}
+.cart-page {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--fourth-Color);
+  color: var(--first-Color);
+  position: fixed;
+  top: 100px;
+  direction: rtl;
+}
+
+.cart-page-container {
+  width: var(--width-container);
+  position: fixed;
+  left: 50%;
+  top: 100px;
+  margin-left: calc((calc(var(--width-container) / 2)) * -1);
+  margin-top: 10px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--fourth-Color);
+  border-radius: 8px;
+}
+.cart-header-table {
+  width: 100%;
+  display: flex;
+  background-color: var(--first-Color);
+  color: var(--fourth-Color);
+  padding: 0;
+  margin: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.cart-header-table li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-right: 1px solid var(--fourth-Color);
+}
+.cart-header-table li:first-child {
+  border-right: none;
+}
+.cart-products-table {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  /* background-color: green; */
+  border-top: 1px solid var(--second-Color);
+}
+.cart-products-table li {
+  border-right: 1px solid var(--second-Color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--first-Color);
+}
+.cart-products-table li:first-child {
+  border-right: none;
+}
+.cart-products-table li .count-box {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.cart-products-table li .count-box .arrows-right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.cart-products-table li .count-box .count-left {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-products-table li .count-box .arrows-right .arrows-icon {
+  border: none;
+  background-color: var(--bg-white);
+}
+.cart-products-table li .count-box .arrows-right .arrows-icon:hover {
+  color: var(--second-Color);
+  font-size: 1.03em;
+}
+.cart-payment-table {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--second-Color);
+}
+.cart-payment-table li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
+  color: var(--second-Color);
+}
+.cart-payment-table li:last-child {
+  background-color: var(--second-Color);
+  color: var(--fourth-Color);
+  border-bottom-left-radius: 8px;
+}
